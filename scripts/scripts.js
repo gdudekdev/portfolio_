@@ -1,16 +1,12 @@
-function apparitionMenuBurger() {
-  if (window.matchMedia("(max-width : 900px)").matches) {
-    let navbar = document.querySelector(".navbar .container");
-    let menu = document.createElement("button");
-    let image = document.createElement("img")
-    image.src="menu_hammburger.png"
-    image.alt="menu hamburger"
-    image.width =100;
-    image.height=100;
-    navbar.appendChild(menu);
-  }else{
-    let navbar = document.querySelector(".navbar .container");
-    navbar.removeChild("button")
-  }
-}
-apparitionMenuBurger();
+const btn = document.querySelector(".menu-hamburger");
+const img=document.getElementById("btn-hamburger")
+btn.addEventListener("click", () => {
+    if(img.classList==="icon-hamburger"){
+    img.classList.remove("icon-hamburger");
+    img.classList.add("icon-close");
+    }else{
+        img.classList.remove("icon-close");
+        img.classList.add("icon-hamburger");
+    }
+
+});

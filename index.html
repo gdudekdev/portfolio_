@@ -7,7 +7,6 @@
 
     <!-- Importation du style -->
     <link rel="stylesheet" href="style/style.css" />
-    <!-- Importation du js -->
     <!-- Importation de la font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,23 +20,25 @@
         <nav class="navbar">
             <div class="container">
                 <ul class="nav-links">
-                    <li>
-                        <a href="#about">à propos</a>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">à propos</a>
                     </li>
-                    <li>
-                        <a href="#skills">compétences</a>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">compétences</a>
                     </li>
-                    <li>
-                        <a href="#">LOGO</a>
-                            <!-- <img src="img/logo.svg" alt="logo" style="width: 80px"> -->
+                    <li class="nav-item"> 
+                        <a href="#" class="nav-link">LOGO</a>
+                        <!-- <img src="img/logo.svg" alt="logo" style="width: 80px"> -->
                     </li>
-                    <li>
-                        <a href="#projets">projets</a>
+                    <li class="nav-item">
+                            <a href="#projets" class="nav-link">PROJETS</a>
                     </li>
-                    <li>
-                        <a href="#contact">me contacter</a>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">me contacter</a>
                     </li>
                 </ul>
+
+                <button type="button" class="menu-hamburger"></button>
             </div>
         </nav>
     </header>
@@ -94,6 +95,8 @@
 
     </footer>
 
+    <!-- Importation du js -->
+    <script src="scripts.js"></script>
 </body>
 
 </html>
