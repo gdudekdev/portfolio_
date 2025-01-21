@@ -10,32 +10,43 @@
   --secondary-color: #e3b23c;
   --color-font: #e8f7ee;
 }
-html {
-  height: 100%;
-  background: radial-gradient(ellipse at bottom, #2c303f 0%, #050d33 100%);
-  overflow: auto;
-}
+/* TODO  affichage a mettre en permanence*/
 
+/* html {
+  background: radial-gradient(ellipse at bottom, #2c303f 0%, #050d33 100%);
+  
+} */
+
+html,
+body {
+  overflow: scroll;
+}
 body {
   background-color: var(--bg-color);
   color: var(--color-font);
   font-family: Manrope, sans-serif;
 }
 
+strong,
+strong a {
+  font-size: 1.1rem;
+  color: #e3b23c;
+}
+strong a:hover {
+  text-decoration: underline;
+}
+
 /* NAVLINKS */
 .navbar {
   position: fixed;
-  top: -100px;
-  width: 100%;
-  background-color: none;
-  color: var(--color-font);
-  padding: 10px;
-  transition: top 1.5s ease-out;
-}
-/* Class pour la transition de la navbar lors du chargement de la page */
-.loaded {
-  transition-delay: 200ms;
   top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: transform 1.5s ease-out, background-color 0.5s ease-out;
 }
 
 .container {
@@ -63,24 +74,18 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 4px;
+  height: 3px;
+  border-radius: 100px;
+
   background: rgb(227, 178, 60);
   background: linear-gradient(
-      90deg,
-      rgba(227, 178, 60, 0) 0%,
-      rgba(227, 178, 60, 0.5) 25%,
-      rgba(227, 178, 60, 1) 50%,
-      rgba(227, 178, 60, 0.5) 75%,
-      rgba(227, 178, 60, 0) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.5) 0%,
-      rgba(255, 255, 255, 0.25) 25%,
-      rgba(255, 255, 255, 0) 50%,
-      rgba(255, 255, 255, 0.25) 75%,
-      rgba(255, 255, 255, 0.5) 100%
-    );
+    90deg,
+    rgba(227, 178, 60, 0) 0%,
+    rgba(227, 178, 60, 0.5) 25%,
+    rgba(227, 178, 60, 1) 50%,
+    rgba(227, 178, 60, 0.5) 75%,
+    rgba(227, 178, 60, 0) 100%
+  );
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
@@ -90,6 +95,7 @@ body {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
 .nav-links {
   width: 100vw;
   display: flex;
@@ -190,7 +196,7 @@ body {
 }
 
 /* SECTION HERO */
-
+/* TODO animation de fond  */
 #hero {
   background-color: none;
 
@@ -214,10 +220,42 @@ body {
   height: 500px;
   width: 500px;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 .photo-hero {
   height: 100%;
   width: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* SECTION ABOUT */
+
+#about {
+  background-color: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+.custom-about {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-about {
+  width: 600px;
+  height: auto;
+  padding: 20px;
+}
+.texte-about {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.texte-about h2 {
+  text-align: center;
+  margin-bottom: 1rem;
 }

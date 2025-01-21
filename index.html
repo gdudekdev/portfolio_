@@ -10,7 +10,7 @@
     <!-- Importation de la font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
     <title>Portfolio</title>
 </head>
@@ -38,9 +38,9 @@
                     </li>
                 </ul>
                 <div class="menu-hamburger">
-                    <button type="button" id="btn-hamburger-hamburger" class="icon-hamburger" ></button>
+                    <button type="button" id="btn-hamburger-hamburger" class="icon-hamburger"></button>
                     <div class="affichage-hamburger">
-                        <button type="button" id="btn-hamburger-close" class="icon-close" ></button>
+                        <button type="button" id="btn-hamburger-close" class="icon-close"></button>
                         <ul class="nav-links-hamburger">
                             <li class="nav-item-hamburger">
                                 <a href="#about" class="nav-link-hamburger">A PROPOS</a>
@@ -61,30 +61,44 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main><!-- TODO checké si on peut le faire passer en flex -->
+        
         <!-- Début hero -->
         <section id="hero">
-            <div>
-
-                <!-- <h1>Gauthier DUDEK</h1>
-            <h2>présentation</h2> -->
-
+            <div class="custom-hero">
+                <div class="cadre-photo-hero">
+                    <img src="img/photo_hero.jpg" alt="Photo Hero" class="photo-hero">
+                </div>
+                <div class="texte-hero">
+                    <h1>Gauthier DUDEK</h1>
+                </div>
             </div>
         </section>
         <!-- Fin hero -->
         <!-- Début about -->
         <section id="about">
-            <!-- <h2>à propos de moi</h2>
-                <p>Développeur passionné et déterminé, je me spécialise dans le développement backend avec des
-                    compétences en C, Python, Java et PHP. Convaincu que la programmation est avant tout une
-                    aventure collective, je valorise les échanges au sein de la communauté des développeurs.
-                    Toujours en quête d’optimisation et de performance, je cherche à créer des solutions
-                    efficaces et robustes.
-                    Si vous recherchez un développeur engagé, curieux et prêt à relever de nouveaux défis,
-                    n’hésitez pas à me contacter.
-                </p> -->
+            <div class="custom-about">
 
-            <!-- CTA Me découvrir (renvoie au à propos) -->
+                <div class="texte-about">
+                    <h2>À propos de moi</h2>
+                    <p><strong>Développeur</strong> passionné et déterminé, je me spécialise dans le développement
+                        backend avec des
+                        compétences en C, Python, Java et PHP. Convaincu que la programmation est avant tout une
+                        aventure <strong>collective</strong>, je valorise les échanges au sein de la communauté des
+                        développeurs.
+                        Toujours en quête d'optimisation et de performance, je cherche à créer des solutions
+                        <strong>efficaces</strong> et robustes.
+                        Si vous recherchez un développeur engagé, curieux et prêt à relever de nouveaux défis,
+                        n'hésitez pas <strong><a href="#">à me contacter</a></strong>.
+                    </p>
+                </div>
+
+                <div class="cadre-photo-about" >
+                    <img src="https://dummyimage.com/1920x1080.gif" alt="Photo section à propos"class="photo-about">
+                </div>
+            </div>
+
+            <!-- TODO CTA Me découvrir (renvoie au à propos) -->
         </section>
         <!-- Fin about -->
 
